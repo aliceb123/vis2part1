@@ -44,7 +44,7 @@
           "longitude": {"field": "longitude", "type": "quantitative"},
           "latitude": {"field": "latitude", "type": "quantitative"},
           "size": {
-            "field": "avg_rainfall",
+            "field": "rainfall",
             "type": "quantitative",
             "title": "Rainfall",
             "scale": {"domain": [100, 2000]}
