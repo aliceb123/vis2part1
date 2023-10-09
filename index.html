@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rainfall in Australia | Week 10 Homework FIT3179 </title>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  
+  <!-- Import pure.css - From wk9 multiple dashboards section-->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+  integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+  
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h1>Rainfall in Australia | Week 10 Homework FIT3179</h1>
+        <p>This page shows how rainfall varies across the country of Australia. 
+          <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.weatherandradar.com%2Fweather-news%2Fthe-real-shape-of-a-falling-raindrop--ee0e2fe4-523c-44a0-8cfc-ba5ab1ef60c6&psig=AOvVaw07Y2uB-Pkb9j7djyuuyJR1&ust=1696842465870000&source=images&cd=vfe&opi=89978449&ved=0CA4QjRxqFwoTCLDJ8vWM5oEDFQAAAAAdAAAAABAD" alt="raindrop"
+          The first graph highlights how different locations around Australia experiences different rainfall levels
+          The second graph shows how different minimum and maximum temperatures can impact rainfall across the states. 
+          The second graph feautures filtering options. 
+        </p>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <div class="page">
+      <!-- pure grid group -->
+      <div class="pure-g">
+        <div class="pure-u-1-2">
+          <div class="description description-left">
+            <h2>Visualisation 1</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+          </div>
+        </div>
+        <div class="pure-u-1-2">
+          <div id="symbol_map1"></div>
+        </div>
+      </div>
+      <script type="text/javascript">
+    
+        var spec2 = "js/symbol_map_with_graticules.vg.json";
+        vegaEmbed('#symbol_map1', spec2).then(function(result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+      </script>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div class="description description-left">
+          <h2>Visualisation 2</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+        </div>
+      </div>
+      <div class="pure-u-1-2">
+        <div id="scatter_plot"></div>
+      </div>
+    </div>
+<script type="text/javascript">
+
+  var spec2 = "js/bubblechart_try.vg.json";
+  vegaEmbed('#scatter_plot', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+<!-- end pure grid group -->
+
+<!-- pure grid group -->
+<div class="pure-g">
+  <div class="pure-u-1-2">
+    <div class="description description-left">
+      <h2>Visualisation 3</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+    </div>
+  </div>
+  <div class="pure-u-1-2">
+    <div id="bar_chart"></div>
+  </div>
+</div>
+<script type="text/javascript">
+
+var spec2 = "js/bar_chart_vis2.vg.json";
+vegaEmbed('#bar_chart', spec2).then(function(result) {
+// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);
+</script>
+<!-- end pure grid group -->
+
+<!-- pure grid group -->
+<div class="pure-g">
+  <div class="pure-u-1-2">
+    <div class="description description-left">
+      <h2>Visualisation 4</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+    </div>
+  </div>
+  <div class="pure-u-1-2">
+    <div id="symbol_map"></div>
+  </div>
+</div>
+<script type="text/javascript">
+
+var spec2 = "js/windmap_waus.vg.json";
+vegaEmbed('#symbol_map', spec2).then(function(result) {
+// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);
+</script>
+<!-- end pure grid group -->
+
+<!-- pure grid group -->
+<div class="pure-g">
+  <div class="pure-u-1-2">
+    <div class="description description-left">
+      <h2>Visualisation 5</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+    </div>
+  </div>
+  <div class="pure-u-1-2">
+    <div id="radial_chart"></div>
+  </div>
+</div>
+<script type="text/javascript">
+
+var spec2 = "js/radial.vg.json";
+vegaEmbed('#radial_chart', spec2).then(function(result) {
+// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);
+</script>
+<!-- end pure grid group -->
+
+</body>
+</html>

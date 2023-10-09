@@ -1,0 +1,68 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "height": 400,
+    "title": "Minimum & Maximum Temperatures around the Country",
+    "data": {
+    "url": "https://raw.githubusercontent.com/aliceb123/vis2part1/main/data/weatherAUS.csv"
+    },
+    "params": [
+      {
+        "name": "state_highlight",
+        "select": {"type": "point", "fields": ["state"]},
+        "bind": "legend"
+      },
+      {"name": "state_selection","bind": 
+      {"input": "select",
+      "options": [null,
+      "New South Wales","Victoria","Australian Capital Territory","South Australia","Western Australia","Tasmania",
+      "Northern Territory"],
+      "labels":[
+      "Show All","New South Wales","Victoria","Australian Capital Territory","South Australia","Western Australia",
+      "Tasmania","Northern Territory"],
+      "name": "State Selection: "
+      }
+      }
+    ],
+    "transform": [
+      {"filter": "datum.mintemp > 0"}, 
+      {"filter": "datum.maxtemp > 0"},
+      {"filter": "state_selection == null || datum.state ==state_selection"}
+    ],
+
+    "mark": "circle",
+    "encoding": {
+    "x": {
+    "field": "mintemp",
+    "type": "quantitative",
+    "title": "Minimum temperature"
+    },
+    "y": {
+    "field": "maxtemp",
+    "type": "quantitative",
+    "title": "Maximum Temperature"
+     },
+     "color": {
+      "field": "state",
+      "type": "nominal"
+      },
+    "size": {
+    "field": "rainfall",
+    "type": "quantitative",
+    "title": "Rainfall"
+      },
+    "opacity": {
+    "condition": {"param": "state_highlight", "value": 0.6},
+    "value": 0.05
+     }
+    },
+  "tooltip": [
+    {"field": "Location", "type": "nominal", "title": "Location"},
+    {"field": "rainfall", "type": "quantitative", "title": "Average yearly rainfall", "format": ","},
+    {"field": "mintemp", "type": "quantitative", "title": "Average minimum temperature", "format": ","},
+    {"field": "maxtemp", "type": "quantitative", "title": "Average maximum temperature", "format": ","}
+  ]
+}
+
+    
+ 

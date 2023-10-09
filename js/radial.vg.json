@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 450,
+  "description": "A simple radial chart with embedded data.",
+  "data": {
+    "values": [
+      {"category": "Ballarat", "value": 527},
+      {"category": "Bendigo", "value": 491},
+      {"category": "Sale", "value": 453},
+      {"category": "Melbourne Airport", "value": 436},
+      {"category": "Melbourne", "value": 455},
+      {"category": "Mildura", "value": 284},
+      {"category": "Nhill", "value": 147},
+      {"category": "Portland", "value": 758},
+      {"category": "Watsonia", "value": 558},
+      {"category": "Dartmoor", "value": 632},
+      {"category": "Williamstown", "value": 916},
+      {"category": "Richmond", "value": 631}]
+  },
+
+  "layer": [{
+    "mark": {"type": "arc", "innerRadius": 20, "stroke": "#fff"}
+  },{
+    "mark": {"type": "text", "radiusOffset": 10,"color": "black"},
+    "encoding": {
+      "text": {"field": "category", "type": "nominal", "color": "black"}
+    }
+  }],
+  "encoding": {
+    "theta": {"field": "value", "type": "quantitative", "stack": true},
+    "radius": {"field": "value", "scale": {"type": "sqrt", "zero": true, "rangeMin": 20}},
+    "color": {"field": "value", "type": "nominal", "legend": null}
+  }
+}
